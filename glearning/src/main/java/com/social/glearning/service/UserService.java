@@ -4,5 +4,7 @@ import com.social.glearning.model.User;
 
 public interface UserService {
 
-	public void createUser(User user);
+	public String createUser(User user);
+	public User getUser(String id);
+	public User getUserByEmail(String email);
 }

@@ -1,10 +1,9 @@
 package com.social.glearning.service;
 
-import com.social.glearning.dao.UserDao;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import com.amazonaws.services.dynamodbv2.datamodeling.DynamoDBMapper;
+import com.social.glearning.dao.UserDao;
 import com.social.glearning.model.User;
 
 @Service
@@ -15,7 +14,17 @@ public class UserServiceImpl implements UserService {
 	private UserDao userDao;
 
 	@Override
-	public void createUser(User user) {
-		userDao.createUser(user);
+	public String createUser(User user) {
+		return userDao.createUser(user,true);
+	}
+
+	@Override
+	public User getUser(String id) {
+		return userDao.getUser(id);
+	}
+
+	@Override
+	public User getUserByEmail(String email) {
+		return userDao.getUserByEmail(email);
 	}
 }

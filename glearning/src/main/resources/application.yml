@@ -3,8 +3,15 @@ server:
   
 amazon:
  access:
-   key: gl
-   secret-key: learning
- region: us-west-2
+   key: mykey
+   secret-key: mysecretkey
+ region: us-east-1
  end-point:
-  url: dynamodb.us-west-2.amazonaws.com
+  url: dynamodb.us-east-1.amazonaws.com
+
+aws.region: us-east-1
+aws.s3.audio.bucket: rk-customer
+spring.servlet.multipart.max-file-size: 50MB
+spring.servlet.multipart.max-request-size: 50MB
+  
+  

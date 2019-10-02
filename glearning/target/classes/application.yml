@@ -1,0 +1,17 @@
+server:
+  port: 8080
+  
+amazon:
+ access:
+   key: mykey
+   secret-key: mysecretkey
+ region: us-east-1
+ end-point:
+  url: dynamodb.us-east-1.amazonaws.com
+
+aws.region: us-east-1
+aws.s3.audio.bucket: rk-customer
+spring.servlet.multipart.max-file-size: 50MB
+spring.servlet.multipart.max-request-size: 50MB
+  
+  
